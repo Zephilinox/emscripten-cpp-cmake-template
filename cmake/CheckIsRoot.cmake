@@ -1,0 +1,8 @@
+function(check_project_is_root variable_name)
+    if (NOT DEFINED ${variable_name})
+        set(${variable_name} OFF PARENT_SCOPE)
+        if (PROJECT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+            set(${variable_name} ON PARENT_SCOPE)
+        endif()
+    endif()
+endfunction()

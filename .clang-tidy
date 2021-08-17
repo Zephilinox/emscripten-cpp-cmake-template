@@ -1,0 +1,39 @@
+---
+Checks: '
+    clang-diagnostic-*,
+    clang-analyzer-*,
+    modernize-*,
+    readability-*,
+    performance-*,
+    bugprone-*,
+    cppcoreguidelines-*,
+    misc-*,
+    concurrency-*,
+    google-explicit-constructor,
+    google-global-names-in-headers,
+    fuchsia-multiple-inheritance,
+    -misc-no-recursion,
+    -misc-non-private-member-variables-in-classes,
+    -readability-braces-around-statements,
+    -readability-magic-numbers,
+    -readability-named-parameter,
+    -cppcoreguidelines-avoid-magic-numbers,
+    -modernize-use-trailing-return-type,
+    -cppcoreguidelines-pro-type-vararg, # Used extensively by C libraries
+'
+
+WarningsAsErrors: '*'
+HeaderFilterRegex: ''
+FormatStyle:     file
+CheckOptions:
+  - key:             cppcoreguidelines-explicit-virtual-functions.IgnoreDestructors
+    value:           '1'
+  - key:             cppcoreguidelines-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+    value:           '1'
+  - key:             readability-implicit-bool-conversion.AllowPointerConditions
+    value:           '1'
+  - key:             readability-uppercase-literal-suffix.NewSuffixes
+    value:           'L;LL;LU;LLU'
+
+...
+
