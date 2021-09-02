@@ -12,10 +12,9 @@ A template for using emscripten with C++20 and CMake, and using `GLAD` and `SDL2
 - Linux, Mac, and Windows native builds via `Github Actions`
 - Code coverage via `CodeCov`
 - Code formatting via `clang-format`
-- Static Analysis
-  - `cppcheck` and `clang-tidy`
-  - `Address Sanitizer`, `Leak Sanitizer`, `Thread Sanitizer`, and `Undefined Behaviour Sanitizer`
-- Unit tests ran using `Valgrind` for dynamic memory analysis
+- Static Analysis using `cppcheck` and `clang-tidy`
+- Dynamic Analysis using `Address Sanitizer`, `Leak Sanitizer`, `Thread Sanitizer`, and `Undefined Behaviour Sanitizer`
+- Unit tests ran using `Valgrind` for runtime memory analysis
 - Caching builds via `ccache`
 - Caching CMake dependencies via [CPM](https://github.com/cpm-cmake/CPM.cmake)
 - Multi-project (Monorepo) setup, with `MyLib` for e.g. a game engine, and `MyApp` for e.g the gameplay code
